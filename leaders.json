@@ -1,0 +1,40 @@
+[
+  {
+    "id": "demis-hassabis",
+    "name": "Demis Hassabis",
+    "region": "Europe",
+    "current_role": {
+      "title": "CEO",
+      "company": "Google DeepMind"
+    },
+    "skills": ["GenAI", "Neuroscience", "Agentic AI"],
+    "latest_activity": [
+      {
+        "title": "DeepMind's next-gen AI will be 'more like biological life'",
+        "url": "#",
+        "source": "Sample News",
+        "date": "2025-08-10"
+      }
+    ],
+    "profile_image_url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Demis_Hassabis.width-1000.format-webp.webp"
+  },
+  {
+    "id": "dario-amodei",
+    "name": "Dario Amodei",
+    "region": "USA",
+    "current_role": {
+      "title": "CEO",
+      "company": "Anthropic"
+    },
+    "skills": ["AI Safety", "LLMs", "GenAI"],
+    "latest_activity": [
+      {
+        "title": "Anthropic CEO Dario Amodei on the future of AI",
+        "url": "#",
+        "source": "Sample Blog",
+        "date": "2025-08-05"
+      }
+    ],
+    "profile_image_url": "https://www.databricks.com/sites/default/files/2024-03/Dario%20Amodei-Light%20Background-headshot.jpg"
+  }
+]
