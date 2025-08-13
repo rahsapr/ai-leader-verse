@@ -1,115 +1,131 @@
 import os
 import json
+import csv
+import re
 from serpapi import GoogleSearch
 
-FILE_NAME = 'leaders.json'
+LEADERS_FILE = 'leaders.json'
+SEED_FILE = 'seed_leaders.csv'
+
+# --- Using the new, more direct search queries as you suggested ---
 SEARCH_QUERIES = [
-    "CEO of top Generative AI startups",
-    "leading researchers in Agentic AI",
-    "founders of major LLM companies"
+    "list of top 100 generative AI leaders",
+    "most influential generative AI researchers 2025",
+    "founders and CEOs of top AI startups list"
 ]
 
-def search_for_new_leaders():
-    """
-    Performs Google searches to discover potential new leaders.
-    Returns a list of potential leaders with their name and company.
-    """
-    print("Searching for new leaders...")
+def load_existing_leaders():
+    """Loads leaders from the JSON file and returns the list and a set of IDs for fast lookups."""
+    try:
+        with open(LEADERS_FILE, 'r', encoding='utf-8') as f:
+            existing_leaders = json.load(f)
+        existing_ids = {leader.get('id', '') for leader in existing_leaders}
+        print(f"Loaded {len(existing_leaders)} existing leaders.")
+        return existing_leaders, existing_ids
+    except FileNotFoundError:
+        print("leaders.json not found. Starting with an empty list.")
+        return [], set()
+
+def process_seed_file(existing_ids):
+    """Reads the seed_leaders.csv file and returns a list of new leaders to be added."""
+    new_leaders_from_seed = []
+    try:
+        with open(SEED_FILE, 'r', encoding='utf-8') as f:
+            # Using DictReader to easily access columns by name ('name', 'company')
+            reader = csv.DictReader(f)
+            for row in reader:
+                name = row.get('name', '').strip()
+                company = row.get('company', '').strip()
+                if not name: # Skip empty rows
+                    continue
+                
+                leader_id = name.lower().replace(' ', '-')
+                if leader_id not in existing_ids:
+                    print(f"[Seed] Found new leader from CSV: {name}")
+                    new_leaders_from_seed.append({
+                        "id": leader_id,
+                        "name": name,
+                        "current_role": {"company": company or "Unknown"}
+                    })
+                    existing_ids.add(leader_id) # Add to set to avoid duplicates in the same run
+        
+        # Optional: Clear the seed file after processing so it doesn't run every time
+        # with open(SEED_FILE, 'w', newline='') as f:
+        #     writer = csv.writer(f)
+        #     writer.writerow(['name', 'company'])
+        # print("Seed file has been processed and cleared.")
+
+    except FileNotFoundError:
+        print("No seed_leaders.csv file found. Skipping manual input.")
+    return new_leaders_from_seed
+
+def search_for_new_leaders(existing_ids):
+    """Performs Google searches using smarter queries and parsing to find new leaders."""
+    print("\nStarting automated search for new leaders...")
     potential_leaders = []
     api_key = os.getenv("SERPAPI_API_KEY")
 
     if not api_key:
-        print("Error: SERPAPI_API_KEY not found. Stopping scraper.")
+        print("Error: SERPAPI_API_KEY not found. Stopping automated search.")
         return []
 
     for query in SEARCH_QUERIES:
         print(f"Running search query: '{query}'")
-        search = GoogleSearch({
-            "q": query,
-            "api_key": api_key
-        })
-        results = search.get_dict()
+        try:
+            search = GoogleSearch({"q": query, "api_key": api_key, "num": "20"}) # Ask for more results
+            results = search.get_dict().get('organic_results', [])
 
-        # Try to extract names from "organic_results"
-        if 'organic_results' in results:
-            for result in results.get('organic_results', []):
-                # Simple logic: if a title contains " - " or " | ", split it.
-                # This is a basic way to find "Name - Company". It can be improved later.
-                if 'title' in result:
-                    parts = result['title'].replace(' | ', ' - ').split(' - ')
-                    if len(parts) >= 2:
-                        name = parts[0].strip()
-                        company = parts[1].strip()
-                        # Basic filter to avoid generic results
-                        if len(name.split()) > 1 and len(name.split()) < 4:
-                            potential_leaders.append({"name": name, "company": company})
+            for result in results:
+                text_to_search = f"{result.get('title', '')} {result.get('snippet', '')}"
+                
+                # Smarter pattern matching for names
+                found_names = re.findall(r'([A-Z][a-z]+(?:\s[A-Z][a-z\'-]+)+)', text_to_search)
 
-    print(f"Found {len(potential_leaders)} potential new leaders from searches.")
+                if found_names:
+                    for name in found_names:
+                        # Filter out things that are clearly not names
+                        if len(name.split()) > 1 and len(name.split()) < 5 and " " in name:
+                            leader_id = name.strip().lower().replace(' ', '-')
+                            if leader_id not in existing_ids:
+                                print(f"[Search] Found potential new leader: {name}")
+                                potential_leaders.append({"id": leader_id, "name": name, "current_role": {"company": "Unknown"}})
+                                existing_ids.add(leader_id)
+        except Exception as e:
+            print(f"An error occurred during search: {e}")
+    
     return potential_leaders
 
-def get_latest_activity(leader_name):
-    """
-    Searches for the latest news about a leader.
-    For now, returns a placeholder. We will build this out later.
-    """
-    # Placeholder - In a future step we could scrape news sites here.
-    return [{
-        "title": f"Recent news about {leader_name}",
-        "url": "#",
-        "source": "News Aggregator",
-        "date": "2025-01-01"
-    }]
-
-
-def update_leaders():
-    """
-    Main function to orchestrate the update process.
-    """
-    print("Starting the leader update process...")
-
-    try:
-        with open(FILE_NAME, 'r', encoding='utf-8') as f:
-            existing_leaders = json.load(f)
-    except FileNotFoundError:
-        existing_leaders = []
+def update_leader_list():
+    """Main function to orchestrate the entire update process."""
+    all_leaders, existing_ids = load_existing_leaders()
     
-    existing_ids = {leader.get('id', '') for leader in existing_leaders}
-    print(f"Loaded {len(existing_leaders)} existing leaders.")
+    # 1. Process the manual seed file first
+    new_leaders = process_seed_file(existing_ids)
+    
+    # 2. Run the automated search for more leaders
+    new_leaders.extend(search_for_new_leaders(existing_ids))
 
-    newly_found_leaders = search_for_new_leaders()
-    leaders_to_add = []
-
-    for leader in newly_found_leaders:
-        leader_id = leader['name'].lower().replace(' ', '-')
-        if leader_id not in existing_ids:
-            print(f"New unique leader found: {leader['name']}. Preparing to add.")
-            leaders_to_add.append({
-                "id": leader_id,
-                "name": leader['name'],
-                "region": "Unknown", # We can try to determine this later
-                "current_role": {
-                    "title": "Unknown",
-                    "company": leader['company']
-                },
-                "skills": ["GenAI"], # Default skill
-                "latest_activity": get_latest_activity(leader['name']),
-                "profile_image_url": "https://via.placeholder.com/100" # Placeholder image
-            })
-            # Add to existing_ids immediately to prevent duplicates from the same run
-            existing_ids.add(leader_id)
-
-    if not leaders_to_add:
-        print("No new leaders to add. The list is up to date.")
+    if not new_leaders:
+        print("\nProcess finished. No new leaders were added.")
         return
 
-    print(f"Adding {len(leaders_to_add)} new leaders to the list.")
-    all_leaders = existing_leaders + leaders_to_add
+    print(f"\nFound a total of {len(new_leaders)} new leaders to add.")
+    
+    # 3. Enrich and format the new leader data
+    for leader in new_leaders:
+        leader['region'] = 'Unknown'
+        leader.setdefault('current_role', {}).setdefault('title', 'Unknown')
+        leader['skills'] = ['GenAI']
+        leader['latest_activity'] = []
+        leader['profile_image_url'] = "https://via.placeholder.com/100"
 
-    with open(FILE_NAME, 'w', encoding='utf-8') as f:
-        json.dump(all_leaders, f, indent=4, ensure_ascii=False)
+    # 4. Combine and save the final list
+    final_leader_list = all_leaders + new_leaders
+    with open(LEADERS_FILE, 'w', encoding='utf-8') as f:
+        json.dump(final_leader_list, f, indent=4, ensure_ascii=False)
 
-    print(f"Process finished. Total leaders in file: {len(all_leaders)}.")
+    print(f"Successfully updated leaders.json. Total leaders: {len(final_leader_list)}.")
 
 
 if __name__ == "__main__":
-    update_leaders()
+    update_leader_list()
