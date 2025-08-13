@@ -1,42 +1,40 @@
 name: Update AI Leader Data
 
 on:
-  # This allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
-
-  # This sets up a schedule. The 'cron' string means "run at 02:00 UTC on the 1st of every month".
-  # We will keep this commented out for now while we test.
-  # schedule:
-  #  - cron: '0 2 1 * *'
+  schedule:
+    - cron: '0 8 * * 1' # Runs at 8:00 UTC every Monday
 
 jobs:
   scrape:
     runs-on: ubuntu-latest
     steps:
-    # Step 1: Checks-out your repository so the job can access your files
-    - name: Check out repository
-      uses: actions/checkout@v4
+      - name: Check out repository
+        uses: actions/checkout@v4
 
-    # Step 2: Sets up the Python programming language for us to use
-    - name: Set up Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.10'
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
 
-    # Step 3: Runs our Python script
-    - name: Run the scraper script
-      run: python scraper.py
+      # New Step: Install the libraries we need for searching and scraping
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4 google-search-results
 
-    # Step 4: Commits the changes that the script made (to leaders.json)
-    - name: Commit and push if data changed
-      run: |
-        git config --global user.name "AI-Leader-Bot"
-        git config --global user.email "bot@github.com"
-        git add leaders.json
-        # The following lines check if there were any changes and only commits if there are.
-        if git diff --staged --quiet; then
-          echo "No changes to commit."
-        else
-          git commit -m "Update leader data"
-          git push
-        fi
+      - name: Run the scraper script
+        # New: Give the script access to our secret API key
+        env:
+          SERPAPI_API_KEY: ${{ secrets.SERPAPI_API_KEY }}
+        run: python scraper.py
+
+      - name: Commit and push if data changed
+        run: |
+          git config --global user.name "AI-Leader-Bot"
+          git config --global user.email "bot@github.com"
+          git add leaders.json
+          if git diff --staged --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Discovered and updated AI leaders"
+            git push
+          fi
