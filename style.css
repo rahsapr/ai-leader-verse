@@ -1,0 +1,14 @@
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: #f0f2f5; color: #1c1e21; margin: 0; }
+.header { background-color: #fff; padding: 20px; text-align: center; border-bottom: 1px solid #ddd; }
+.filters { text-align: center; padding: 20px; }
+#searchInput { width: 50%; padding: 12px; border-radius: 20px; border: 1px solid #ccc; font-size: 16px; }
+.container { max-width: 900px; margin: 20px auto; display: grid; grid-gap: 20px; }
+.leader-card { background-color: #fff; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 20px; display: flex; }
+.leader-image { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin-right: 20px; }
+.leader-info h2 { margin: 0 0 5px 0; }
+.leader-info p { margin: 0 0 10px 0; color: #606770; }
+.skills span { background-color: #e7f3ff; color: #1877f2; padding: 5px 10px; border-radius: 15px; font-size: 12px; margin-right: 5px; }
+.activity { margin-top: 15px; border-top: 1px solid #eee; padding-top: 15px; }
+.activity a { text-decoration: none; color: #333; font-weight: bold; }
+.activity a:hover { text-decoration: underline; }
+.activity p { font-size: 12px; color: #606770; margin-top: 4px;}
