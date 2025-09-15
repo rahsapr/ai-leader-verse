@@ -2790,5 +2790,47 @@
         ],
         "latest_activity": [],
         "profile_image_url": "https://via.placeholder.com/100"
+    },
+    {
+        "id": "sarah-guo",
+        "name": "Sarah Guo",
+        "current_role": {
+            "company": "Unknown",
+            "title": "Unknown"
+        },
+        "region": "Unknown",
+        "skills": [
+            "GenAI"
+        ],
+        "latest_activity": [],
+        "profile_image_url": "https://via.placeholder.com/100"
+    },
+    {
+        "id": "conor-grennan",
+        "name": "Conor Grennan",
+        "current_role": {
+            "company": "Unknown",
+            "title": "Unknown"
+        },
+        "region": "Unknown",
+        "skills": [
+            "GenAI"
+        ],
+        "latest_activity": [],
+        "profile_image_url": "https://via.placeholder.com/100"
+    },
+    {
+        "id": "julie-zhuo",
+        "name": "Julie Zhuo",
+        "current_role": {
+            "company": "Unknown",
+            "title": "Unknown"
+        },
+        "region": "Unknown",
+        "skills": [
+            "GenAI"
+        ],
+        "latest_activity": [],
+        "profile_image_url": "https://via.placeholder.com/100"
     }
 ]
