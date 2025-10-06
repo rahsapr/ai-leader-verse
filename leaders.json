@@ -3014,5 +3014,61 @@
         ],
         "latest_activity": [],
         "profile_image_url": "https://via.placeholder.com/100"
+    },
+    {
+        "id": "erica-khalili",
+        "name": "Erica Khalili",
+        "current_role": {
+            "company": "Unknown",
+            "title": "Unknown"
+        },
+        "region": "Unknown",
+        "skills": [
+            "GenAI"
+        ],
+        "latest_activity": [],
+        "profile_image_url": "https://via.placeholder.com/100"
+    },
+    {
+        "id": "homam-maalouf",
+        "name": "Homam Maalouf",
+        "current_role": {
+            "company": "Unknown",
+            "title": "Unknown"
+        },
+        "region": "Unknown",
+        "skills": [
+            "GenAI"
+        ],
+        "latest_activity": [],
+        "profile_image_url": "https://via.placeholder.com/100"
+    },
+    {
+        "id": "jacqueline-reses",
+        "name": "Jacqueline Reses",
+        "current_role": {
+            "company": "Unknown",
+            "title": "Unknown"
+        },
+        "region": "Unknown",
+        "skills": [
+            "GenAI"
+        ],
+        "latest_activity": [],
+        "profile_image_url": "https://via.placeholder.com/100"
+    },
+    {
+        "id": "ronak-vyas",
+        "name": "Ronak Vyas",
+        "current_role": {
+            "company": "Unknown",
+            "title": "Unknown"
+        },
+        "region": "Unknown",
+        "skills": [
+            "GenAI"
+        ],
+        "latest_activity": [],
+        "profile_image_url": "https://via.placeholder.com/100"
     }
 ]
