@@ -3672,5 +3672,145 @@
         ],
         "latest_activity": [],
         "profile_image_url": "https://via.placeholder.com/100"
+    },
+    {
+        "id": "top-chief",
+        "name": "Top Chief",
+        "current_role": {
+            "company": "Unknown",
+            "title": "Unknown"
+        },
+        "region": "Unknown",
+        "skills": [
+            "GenAI"
+        ],
+        "latest_activity": [],
+        "profile_image_url": "https://via.placeholder.com/100"
+    },
+    {
+        "id": "leadership-directory-top-chief",
+        "name": "Leadership Directory Top Chief",
+        "current_role": {
+            "company": "Unknown",
+            "title": "Unknown"
+        },
+        "region": "Unknown",
+        "skills": [
+            "GenAI"
+        ],
+        "latest_activity": [],
+        "profile_image_url": "https://via.placeholder.com/100"
+    },
+    {
+        "id": "ali-keshavarz",
+        "name": "Ali Keshavarz",
+        "current_role": {
+            "company": "Unknown",
+            "title": "Unknown"
+        },
+        "region": "Unknown",
+        "skills": [
+            "GenAI"
+        ],
+        "latest_activity": [],
+        "profile_image_url": "https://via.placeholder.com/100"
+    },
+    {
+        "id": "chief-data-analytics",
+        "name": "Chief Data Analytics",
+        "current_role": {
+            "company": "Unknown",
+            "title": "Unknown"
+        },
+        "region": "Unknown",
+        "skills": [
+            "GenAI"
+        ],
+        "latest_activity": [],
+        "profile_image_url": "https://via.placeholder.com/100"
+    },
+    {
+        "id": "abdulla-al",
+        "name": "Abdulla Al",
+        "current_role": {
+            "company": "Unknown",
+            "title": "Unknown"
+        },
+        "region": "Unknown",
+        "skills": [
+            "GenAI"
+        ],
+        "latest_activity": [],
+        "profile_image_url": "https://via.placeholder.com/100"
+    },
+    {
+        "id": "the-future",
+        "name": "The Future",
+        "current_role": {
+            "company": "Unknown",
+            "title": "Unknown"
+        },
+        "region": "Unknown",
+        "skills": [
+            "GenAI"
+        ],
+        "latest_activity": [],
+        "profile_image_url": "https://via.placeholder.com/100"
+    },
+    {
+        "id": "leaders-the-most-influential",
+        "name": "Leaders The Most Influential",
+        "current_role": {
+            "company": "Unknown",
+            "title": "Unknown"
+        },
+        "region": "Unknown",
+        "skills": [
+            "GenAI"
+        ],
+        "latest_activity": [],
+        "profile_image_url": "https://via.placeholder.com/100"
+    },
+    {
+        "id": "leaders-worldwide",
+        "name": "Leaders Worldwide",
+        "current_role": {
+            "company": "Unknown",
+            "title": "Unknown"
+        },
+        "region": "Unknown",
+        "skills": [
+            "GenAI"
+        ],
+        "latest_activity": [],
+        "profile_image_url": "https://via.placeholder.com/100"
+    },
+    {
+        "id": "joy-buolamwini",
+        "name": "Joy Buolamwini",
+        "current_role": {
+            "company": "Unknown",
+            "title": "Unknown"
+        },
+        "region": "Unknown",
+        "skills": [
+            "GenAI"
+        ],
+        "latest_activity": [],
+        "profile_image_url": "https://via.placeholder.com/100"
+    },
+    {
+        "id": "algorithmic-justice-league",
+        "name": "Algorithmic Justice League",
+        "current_role": {
+            "company": "Unknown",
+            "title": "Unknown"
+        },
+        "region": "Unknown",
+        "skills": [
+            "GenAI"
+        ],
+        "latest_activity": [],
+        "profile_image_url": "https://via.placeholder.com/100"
     }
 ]
