@@ -4666,5 +4666,103 @@
         ],
         "latest_activity": [],
         "profile_image_url": "https://via.placeholder.com/100"
+    },
+    {
+        "id": "power-list-business-insider's",
+        "name": "Power List Business Insider's",
+        "current_role": {
+            "company": "Unknown",
+            "title": "Unknown"
+        },
+        "region": "Unknown",
+        "skills": [
+            "GenAI"
+        ],
+        "latest_activity": [],
+        "profile_image_url": "https://via.placeholder.com/100"
+    },
+    {
+        "id": "power-list",
+        "name": "Power List",
+        "current_role": {
+            "company": "Unknown",
+            "title": "Unknown"
+        },
+        "region": "Unknown",
+        "skills": [
+            "GenAI"
+        ],
+        "latest_activity": [],
+        "profile_image_url": "https://via.placeholder.com/100"
+    },
+    {
+        "id": "minister-ash-vasham",
+        "name": "Minister Ash Vasham",
+        "current_role": {
+            "company": "Unknown",
+            "title": "Unknown"
+        },
+        "region": "Unknown",
+        "skills": [
+            "GenAI"
+        ],
+        "latest_activity": [],
+        "profile_image_url": "https://via.placeholder.com/100"
+    },
+    {
+        "id": "power-list-huang",
+        "name": "Power List Huang",
+        "current_role": {
+            "company": "Unknown",
+            "title": "Unknown"
+        },
+        "region": "Unknown",
+        "skills": [
+            "GenAI"
+        ],
+        "latest_activity": [],
+        "profile_image_url": "https://via.placeholder.com/100"
+    },
+    {
+        "id": "meet-stanford's",
+        "name": "Meet Stanford's",
+        "current_role": {
+            "company": "Unknown",
+            "title": "Unknown"
+        },
+        "region": "Unknown",
+        "skills": [
+            "GenAI"
+        ],
+        "latest_activity": [],
+        "profile_image_url": "https://via.placeholder.com/100"
+    },
+    {
+        "id": "the-daily",
+        "name": "The Daily",
+        "current_role": {
+            "company": "Unknown",
+            "title": "Unknown"
+        },
+        "region": "Unknown",
+        "skills": [
+            "GenAI"
+        ],
+        "latest_activity": [],
+        "profile_image_url": "https://via.placeholder.com/100"
+    },
+    {
+        "id": "this-top",
+        "name": "This Top",
+        "current_role": {
+            "company": "Unknown",
+            "title": "Unknown"
+        },
+        "region": "Unknown",
+        "skills": [
+            "GenAI"
+        ],
+        "latest_activity": [],
+        "profile_image_url": "https://via.placeholder.com/100"
     }
 ]
