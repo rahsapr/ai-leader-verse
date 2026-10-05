@@ -10070,5 +10070,425 @@
         ],
         "latest_activity": [],
         "profile_image_url": "https://via.placeholder.com/100"
+    },
+    {
+        "id": "mark-chen",
+        "name": "Mark Chen",
+        "current_role": {
+            "company": "Unknown",
+            "title": "Unknown"
+        },
+        "region": "Unknown",
+        "skills": [
+            "GenAI"
+        ],
+        "latest_activity": [],
+        "profile_image_url": "https://via.placeholder.com/100"
+    },
+    {
+        "id": "chief-research-officer",
+        "name": "Chief Research Officer",
+        "current_role": {
+            "company": "Unknown",
+            "title": "Unknown"
+        },
+        "region": "Unknown",
+        "skills": [
+            "GenAI"
+        ],
+        "latest_activity": [],
+        "profile_image_url": "https://via.placeholder.com/100"
+    },
+    {
+        "id": "ex-harvard",
+        "name": "Ex Harvard",
+        "current_role": {
+            "company": "Unknown",
+            "title": "Unknown"
+        },
+        "region": "Unknown",
+        "skills": [
+            "GenAI"
+        ],
+        "latest_activity": [],
+        "profile_image_url": "https://via.placeholder.com/100"
+    },
+    {
+        "id": "influential-women-shaping",
+        "name": "Influential Women Shaping",
+        "current_role": {
+            "company": "Unknown",
+            "title": "Unknown"
+        },
+        "region": "Unknown",
+        "skills": [
+            "GenAI"
+        ],
+        "latest_activity": [],
+        "profile_image_url": "https://via.placeholder.com/100"
+    },
+    {
+        "id": "manifold-markets",
+        "name": "Manifold Markets",
+        "current_role": {
+            "company": "Unknown",
+            "title": "Unknown"
+        },
+        "region": "Unknown",
+        "skills": [
+            "GenAI"
+        ],
+        "latest_activity": [],
+        "profile_image_url": "https://via.placeholder.com/100"
+    },
+    {
+        "id": "all-time-bayesian",
+        "name": "All Time Bayesian",
+        "current_role": {
+            "company": "Unknown",
+            "title": "Unknown"
+        },
+        "region": "Unknown",
+        "skills": [
+            "GenAI"
+        ],
+        "latest_activity": [],
+        "profile_image_url": "https://via.placeholder.com/100"
+    },
+    {
+        "id": "our-top-gen",
+        "name": "Our Top Gen",
+        "current_role": {
+            "company": "Unknown",
+            "title": "Unknown"
+        },
+        "region": "Unknown",
+        "skills": [
+            "GenAI"
+        ],
+        "latest_activity": [],
+        "profile_image_url": "https://via.placeholder.com/100"
+    },
+    {
+        "id": "art-weinstein",
+        "name": "Art Weinstein",
+        "current_role": {
+            "company": "Unknown",
+            "title": "Unknown"
+        },
+        "region": "Unknown",
+        "skills": [
+            "GenAI"
+        ],
+        "latest_activity": [],
+        "profile_image_url": "https://via.placeholder.com/100"
+    },
+    {
+        "id": "harvard-business-inspiring-minds",
+        "name": "Harvard Business Inspiring Minds",
+        "current_role": {
+            "company": "Unknown",
+            "title": "Unknown"
+        },
+        "region": "Unknown",
+        "skills": [
+            "GenAI"
+        ],
+        "latest_activity": [],
+        "profile_image_url": "https://via.placeholder.com/100"
+    },
+    {
+        "id": "dan-levy",
+        "name": "Dan Levy",
+        "current_role": {
+            "company": "Unknown",
+            "title": "Unknown"
+        },
+        "region": "Unknown",
+        "skills": [
+            "GenAI"
+        ],
+        "latest_activity": [],
+        "profile_image_url": "https://via.placeholder.com/100"
+    },
+    {
+        "id": "harvard-kennedy",
+        "name": "Harvard Kennedy",
+        "current_role": {
+            "company": "Unknown",
+            "title": "Unknown"
+        },
+        "region": "Unknown",
+        "skills": [
+            "GenAI"
+        ],
+        "latest_activity": [],
+        "profile_image_url": "https://via.placeholder.com/100"
+    },
+    {
+        "id": "demis-hassabis-demis",
+        "name": "Demis Hassabis Demis",
+        "current_role": {
+            "company": "Unknown",
+            "title": "Unknown"
+        },
+        "region": "Unknown",
+        "skills": [
+            "GenAI"
+        ],
+        "latest_activity": [],
+        "profile_image_url": "https://via.placeholder.com/100"
+    },
+    {
+        "id": "year-magazine",
+        "name": "Year Magazine",
+        "current_role": {
+            "company": "Unknown",
+            "title": "Unknown"
+        },
+        "region": "Unknown",
+        "skills": [
+            "GenAI"
+        ],
+        "latest_activity": [],
+        "profile_image_url": "https://via.placeholder.com/100"
+    },
+    {
+        "id": "report-the-united-states",
+        "name": "Report The United States",
+        "current_role": {
+            "company": "Unknown",
+            "title": "Unknown"
+        },
+        "region": "Unknown",
+        "skills": [
+            "GenAI"
+        ],
+        "latest_activity": [],
+        "profile_image_url": "https://via.placeholder.com/100"
+    },
+    {
+        "id": "companies-databricks-employees",
+        "name": "Companies Databricks Employees",
+        "current_role": {
+            "company": "Unknown",
+            "title": "Unknown"
+        },
+        "region": "Unknown",
+        "skills": [
+            "GenAI"
+        ],
+        "latest_activity": [],
+        "profile_image_url": "https://via.placeholder.com/100"
+    },
+    {
+        "id": "ali-ghodsi-founded",
+        "name": "Ali Ghodsi Founded",
+        "current_role": {
+            "company": "Unknown",
+            "title": "Unknown"
+        },
+        "region": "Unknown",
+        "skills": [
+            "GenAI"
+        ],
+        "latest_activity": [],
+        "profile_image_url": "https://via.placeholder.com/100"
+    },
+    {
+        "id": "palantir-technologies-employees",
+        "name": "Palantir Technologies Employees",
+        "current_role": {
+            "company": "Unknown",
+            "title": "Unknown"
+        },
+        "region": "Unknown",
+        "skills": [
+            "GenAI"
+        ],
+        "latest_activity": [],
+        "profile_image_url": "https://via.placeholder.com/100"
+    },
+    {
+        "id": "alex-karp-founded",
+        "name": "Alex Karp Founded",
+        "current_role": {
+            "company": "Unknown",
+            "title": "Unknown"
+        },
+        "region": "Unknown",
+        "skills": [
+            "GenAI"
+        ],
+        "latest_activity": [],
+        "profile_image_url": "https://via.placeholder.com/100"
+    },
+    {
+        "id": "amazon-employees",
+        "name": "Amazon Employees",
+        "current_role": {
+            "company": "Unknown",
+            "title": "Unknown"
+        },
+        "region": "Unknown",
+        "skills": [
+            "GenAI"
+        ],
+        "latest_activity": [],
+        "profile_image_url": "https://via.placeholder.com/100"
+    },
+    {
+        "id": "ex-google",
+        "name": "Ex Google",
+        "current_role": {
+            "company": "Unknown",
+            "title": "Unknown"
+        },
+        "region": "Unknown",
+        "skills": [
+            "GenAI"
+        ],
+        "latest_activity": [],
+        "profile_image_url": "https://via.placeholder.com/100"
+    },
+    {
+        "id": "startup-founders",
+        "name": "Startup Founders",
+        "current_role": {
+            "company": "Unknown",
+            "title": "Unknown"
+        },
+        "region": "Unknown",
+        "skills": [
+            "GenAI"
+        ],
+        "latest_activity": [],
+        "profile_image_url": "https://via.placeholder.com/100"
+    },
+    {
+        "id": "rodrigo-liang",
+        "name": "Rodrigo Liang",
+        "current_role": {
+            "company": "Unknown",
+            "title": "Unknown"
+        },
+        "region": "Unknown",
+        "skills": [
+            "GenAI"
+        ],
+        "latest_activity": [],
+        "profile_image_url": "https://via.placeholder.com/100"
+    },
+    {
+        "id": "mukund-jha",
+        "name": "Mukund Jha",
+        "current_role": {
+            "company": "Unknown",
+            "title": "Unknown"
+        },
+        "region": "Unknown",
+        "skills": [
+            "GenAI"
+        ],
+        "latest_activity": [],
+        "profile_image_url": "https://via.placeholder.com/100"
+    },
+    {
+        "id": "yang-zhilin",
+        "name": "Yang Zhilin",
+        "current_role": {
+            "company": "Unknown",
+            "title": "Unknown"
+        },
+        "region": "Unknown",
+        "skills": [
+            "GenAI"
+        ],
+        "latest_activity": [],
+        "profile_image_url": "https://via.placeholder.com/100"
+    },
+    {
+        "id": "light-years-beyond",
+        "name": "Light Years Beyond",
+        "current_role": {
+            "company": "Unknown",
+            "title": "Unknown"
+        },
+        "region": "Unknown",
+        "skills": [
+            "GenAI"
+        ],
+        "latest_activity": [],
+        "profile_image_url": "https://via.placeholder.com/100"
+    },
+    {
+        "id": "may-habib",
+        "name": "May Habib",
+        "current_role": {
+            "company": "Unknown",
+            "title": "Unknown"
+        },
+        "region": "Unknown",
+        "skills": [
+            "GenAI"
+        ],
+        "latest_activity": [],
+        "profile_image_url": "https://via.placeholder.com/100"
+    },
+    {
+        "id": "sean-mc",
+        "name": "Sean Mc",
+        "current_role": {
+            "company": "Unknown",
+            "title": "Unknown"
+        },
+        "region": "Unknown",
+        "skills": [
+            "GenAI"
+        ],
+        "latest_activity": [],
+        "profile_image_url": "https://via.placeholder.com/100"
+    },
+    {
+        "id": "afif-khoury",
+        "name": "Afif Khoury",
+        "current_role": {
+            "company": "Unknown",
+            "title": "Unknown"
+        },
+        "region": "Unknown",
+        "skills": [
+            "GenAI"
+        ],
+        "latest_activity": [],
+        "profile_image_url": "https://via.placeholder.com/100"
+    },
+    {
+        "id": "companies-in",
+        "name": "Companies In",
+        "current_role": {
+            "company": "Unknown",
+            "title": "Unknown"
+        },
+        "region": "Unknown",
+        "skills": [
+            "GenAI"
+        ],
+        "latest_activity": [],
+        "profile_image_url": "https://via.placeholder.com/100"
+    },
+    {
+        "id": "updated-list-here's",
+        "name": "Updated List Here's",
+        "current_role": {
+            "company": "Unknown",
+            "title": "Unknown"
+        },
+        "region": "Unknown",
+        "skills": [
+            "GenAI"
+        ],
+        "latest_activity": [],
+        "profile_image_url": "https://via.placeholder.com/100"
     }
 ]
